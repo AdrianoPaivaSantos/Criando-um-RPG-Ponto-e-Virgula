@@ -6,7 +6,20 @@ cima = keyboard_check(ord("W"));
 esquerda = keyboard_check(ord("A"));
 baixo = keyboard_check(ord("S"));
 
-hveloc = (direita-esquerda)*veloc;
+hveloc = (direita-esquerda);
+vveloc = (baixo-cima);
+veloc_dir = point_direction(x,y,x+hveloc,y+vveloc);
+
+if hveloc != 0 or vveloc != 0{
+	veloc = 2;	
+}else
+{
+	veloc = 0;	
+}
+
+hveloc= lengthdir_x(veloc,veloc_dir);
+vveloc= lengthdir_y(veloc,veloc_dir);
+
 if place_meeting(x+hveloc,y,obj_parede)
 {
 	while !place_meeting(x+sign(hveloc),y,obj_parede)
@@ -17,7 +30,7 @@ if place_meeting(x+hveloc,y,obj_parede)
 }
 x+=hveloc;
 
-vveloc = (baixo-cima)*veloc;
+
 if place_meeting(x,y+vveloc,obj_parede)
 {
 	while !place_meeting(x,y+sign(vveloc),obj_parede)
@@ -64,10 +77,16 @@ switch dir{
 	break;
 		}
 	}
-	if mouse_check_button_pressed(mb_right){
-		alarm[0] = 8;
-		dash_dir = point_direction(x,y,mouse_x,mouse_y);
-		estado = scr_personagem_dash;
+	if stamina >= 10{
+	
+		if mouse_check_button_pressed(mb_right){
+			stamina -= 20;
+			alarm[1] = 180;
+		
+			alarm[0] = 8;
+			dash_dir = point_direction(x,y,mouse_x,mouse_y);
+			estado = scr_personagem_dash;
+		}
 	}
 }
 

@@ -18,3 +18,8 @@ dash_veloc = 6;
 //Estado
 estado = scr_personagem;
 
+veloc_dir = -1;
+//Combate
+max_stamina = 100;
+stamina = max_stamina;
+
