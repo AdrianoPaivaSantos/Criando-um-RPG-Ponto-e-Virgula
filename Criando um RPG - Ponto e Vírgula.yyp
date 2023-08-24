@@ -49,6 +49,7 @@
     {"id":{"name":"spr_personagem_sombra","path":"sprites/spr_personagem_sombra/spr_personagem_sombra.yy",},},
     {"id":{"name":"spr_personagem_parado_baixo","path":"sprites/spr_personagem_parado_baixo/spr_personagem_parado_baixo.yy",},},
     {"id":{"name":"spr_personagem_parado_cima","path":"sprites/spr_personagem_parado_cima/spr_personagem_parado_cima.yy",},},
+    {"id":{"name":"scr_do_slime","path":"scripts/scr_do_slime/scr_do_slime.yy",},},
     {"id":{"name":"spr_personagem_parado_esquerda","path":"sprites/spr_personagem_parado_esquerda/spr_personagem_parado_esquerda.yy",},},
     {"id":{"name":"spr_slime_andando","path":"sprites/spr_slime_andando/spr_slime_andando.yy",},},
     {"id":{"name":"scr_personagem","path":"scripts/scr_personagem/scr_personagem.yy",},},
